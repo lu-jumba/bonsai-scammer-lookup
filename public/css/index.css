@@ -1,0 +1,235 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-family: inherit;
+	font-weight: inherit;
+	color: inherit;
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	background: #f5f5f5;
+	color: #111111;
+	/*min-width: 230px;
+	max-width: 550px;*/
+	width: 100%;
+	margin: 0 auto;
+	Align-items: center;
+    justify-content: center;
+    /*height: 100vh;
+                margin: 0;*/
+    flex-direction: column;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 300;
+}
+
+.hidden {
+	display: none;
+}
+
+.bonsaiapp {
+	background: #fff;
+	margin: 0 auto;
+	position: relative;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+	            0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.bonsaiapp input::-webkit-input-placeholder {
+	font-style: italic;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.bonsaiapp input::-moz-placeholder {
+	font-style: italic;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.bonsaiapp input::input-placeholder {
+	font-style: italic;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.bonsaiapp h1 {
+	position: absolute;
+	top: -140px;
+	width: 100%;
+	font-size: 80px;
+	font-weight: 200;
+	text-align: center;
+	color: #b83f45;
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+}
+
+.toggle-all {
+	width: 1px;
+	height: 1px;
+	border: none; /* Mobile Safari */
+	opacity: 0;
+	position: absolute;
+	right: 100%;
+	bottom: 100%;
+}
+
+/*mine from here*/
+#query-input {
+	border: 2px solid #90EE90;
+	border-radius: 12px;
+	padding: 10px 20px;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+#submit-btn {
+	border: none;
+	border-radius: 12px;
+	background-color: #2b72fb;
+	color: white;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+#results {
+	border: 2px solid #90EE90;
+	border-radius: 12px;
+	padding: 10px;
+	width: 50%;
+	min-height: 50px;
+	margin-top: 20px;
+	text-align: center;
+}
+header {
+	
+	margin: 0 auto;
+padding: 1.2rem 3rem;
+}
+header h1 {
+	/*position: absolute;
+	top: -100px;
+	width: 100%;*/
+	font-size: 60px;
+	font-weight: 200;
+	text-align: center;
+	color: #b83f45;
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+}
+
+header p {
+line-height: 1.2;
+color: #4d4d4d;
+	font-size: 16px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	text-align: center;
+}
+
+/* upto here*/
+
+/*.footer {
+	padding: 10px 15px;
+	height: 20px;
+	text-align: center;
+	font-size: 16px;
+	border-top: 1px solid #e6e6e6;
+}
+
+.footer:before {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 50px;
+	overflow: hidden;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+	            0 8px 0 -3px #f6f6f6,
+	            0 9px 1px -3px rgba(0, 0, 0, 0.2),
+	            0 16px 0 -6px #f6f6f6,
+	            0 17px 2px -6px rgba(0, 0, 0, 0.2);
+}*/
+p {
+	line-height: 1;
+	color: #4d4d4d;
+	font-size: 11px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	text-align: center;
+}
+
+.info {
+	margin: 65px auto 0;
+	color: #4d4d4d;
+	font-size: 11px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	text-align: center;
+}
+
+.info p {
+	line-height: 1;
+}
+
+.info a {
+	color: inherit;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+.info a:hover {
+	text-decoration: underline;
+}
+
+/*
+	Hack to remove background from Mobile Safari.
+	Can't use it globally since it destroys checkboxes in Firefox
+*/
+/*@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.toggle-all,
+	.todo-list li .toggle {
+		background: none;
+	}
+
+	.todo-list li .toggle {
+		height: 40px;
+	}
+}*/
+
+ @media screen and (max-width: 500px) {
+	.footer {
+		height: 50px;
+	}
+	
+		.column {
+		  width: 100%;
+		}
+		.right-container {
+			display: none;
+		  }
+	  
+
+}
+
+:focus,
+.toggle:focus + label,
+.toggle-all:focus + label {
+	box-shadow: 0 0 2px 2px #CF7D7D;
+	outline: 0;
+}

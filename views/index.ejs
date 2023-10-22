@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Bonsai Lookup!</title>
+		<link rel="stylesheet" href="/css/base.css">
+		<link rel="stylesheet" href="/css/index.css">
+		<link rel="stylesheet" href="/css/app.css">
+		
+	</head>
+	<body>
+		<section class="bonsaiapp">
+			<nav class="nav">
+				<ul>
+					<li class="user"><%= user.name || user.username || user.email || user.mailchain_address %></li>
+					<li>
+						<form action="/logout" method="post">
+							<button class="logout" type="submit">Sign out</button>
+						</form>
+					</li>
+				</ul>
+			</nav>
+			<header class="headercon">
+				<h1>bonsai lookup!</h1>
+				<p>Information is Power!  Take a moment & check to See if that Dealer, Employer, Seller, Website, Company/Agency or Job is a Scam </p>
+			</header>
+			<form method="POST" action="/">
+				<input type="text" name="query" id="query-input" placeholder="Enter phone number, email, Website address/name, company/agency/individual">
+				<button type="submit" id="submit-btn">Check</button>
+			</form>
+			<div id="results">
+				<h2>Search Results:</h2>
+				<ul>
+					{{#each results}}
+					<li>
+						<h3>{{ this.title }}</h3>
+						<p>{{ this.content }}</p>
+						<p>{{ this.date }}</p>
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+			{{#if message}}
+			<p>{{ message }}</p>
+			{{/if}}
+			<!--<script type="module">"src=/js/query.js"</script>-->
+		<footer class="info">
+			<p>BonSai Scammer Lookup results are aggregated from user reports & verified by Bonsai Cyber Investigators </p>
+			<p>Report scams, scammers, and fraud to Bonsai Cyber Investigators - bonsaicyber.com.</p>
+			<p>For assistance, reach out: digitalClaims@mailchain. This is a blockchain address. <br/>To ensure your privacy, acquire one at mailchain.com for secure communications.</p>
+		</footer>
+	</body>
+</html>

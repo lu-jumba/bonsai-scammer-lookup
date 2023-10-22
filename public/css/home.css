@@ -1,0 +1,42 @@
+
+.bonsaihome {
+	margin: 0 auto;
+	position: relative;
+}
+
+.bonsaihome h1 {
+	position: absolute;
+	top: -140px;
+	width: 100%;
+	font-size: 80px;
+	font-weight: 200;
+	text-align: center;
+	color: #b83f45;
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+}
+
+.bonsaihome section {
+	padding-top: 1px;
+	text-align: center;
+}
+
+.bonsaihome h2 {
+	padding-bottom: 48px;
+	font-size: 28px;
+	font-weight: 300;
+}
+
+.bonsaihome .button {
+	padding: 13px 45px;
+	font-size: 16px;
+	font-weight: 500;
+	color: white;
+	border-radius: 5px;
+	background: #d83f45;
+}
+
+.bonsaihome a.button {
+	text-decoration: none;
+}
