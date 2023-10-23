@@ -7,13 +7,13 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var passport = require('passport');
 var session = require('express-session');
-var SQLiteStore = require('connect-sqlite3')(session);
+//var SQLiteStore = require('connect-sqlite3')(session);
 
 var indexRouter = require('./routes/index');
 var authRouter = require('./routes/auth'); // require your auth route
 
-var initializeMagicLink = require('./magicLink');
-initializeMagicLink();
+/*var initializeMagicLink = require('./magicLink');
+initializeMagicLink();*/
 
 var app = express();
 

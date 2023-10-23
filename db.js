@@ -1,5 +1,5 @@
 /* eslint-disable no-multi-str */
-var crypto = require('crypto');
+/*var crypto = require('crypto');
 var sqlite3 = require('sqlite3');
 var mkdirp = require('mkdirp');
 
@@ -40,7 +40,7 @@ db.serialize(() => {
    )',
 	);
 
- /* db.run(
+  db.run(
 		'CREATE TABLE IF NOT EXISTS scammers ( \
     id INTEGER PRIMARY KEY, \
     phone_number INTEGER, \
@@ -51,14 +51,14 @@ db.serialize(() => {
 	);*/
 
 	// create an initial user (username: alice, password: letmein)
-	var salt = crypto.randomBytes(16);
+	/*var salt = crypto.randomBytes(16);
 	db.run('INSERT OR IGNORE INTO users (username, hashed_password, salt) VALUES (?, ?, ?)', [
 		'alice',
 		crypto.pbkdf2Sync('letmein', salt, 310000, 32, 'sha256'),
 		salt,
 	]);
 //create scammers
-/*db.run('INSERT OR IGNORE INTO scammers (phone_number, name, aliases, numbers) VALUES (?, ?, ?, ?)', [
+db.run('INSERT OR IGNORE INTO scammers (phone_number, name, aliases, numbers) VALUES (?, ?, ?, ?)', [
   '0708211732',
   'Joseph Okumu',
   ['Baba Liam', 'Peter Nerdy', 'Evans C Rono'],
@@ -132,6 +132,6 @@ db.run('INSERT OR IGNORE INTO scammers (phone_number, name, aliases, numbers) VA
   ['Joseph Awibwa', 'Diana Achieng', 'Ekati David', 'Laalat Chesoen', 'Edwin Mogaka', 'Evans Mogaka', 'Peter Ageyo'],
   ['0705604212']
 ]);*/
-});
+//});
 
-module.exports = db;
+//module.exports = db;

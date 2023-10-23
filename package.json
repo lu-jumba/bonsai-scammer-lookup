@@ -17,7 +17,6 @@
 		"@mailchain/sdk": "0.22.0",
 		"axios": "^1.5.1",
 		"cheerio": "^1.0.0-rc.12",
-		"connect-sqlite3": "^0.9.13",
 		"cookie-parser": "~1.4.4",
 		"debug": "~2.6.9",
 		"dotenv": "^8.6.0",
@@ -28,7 +27,6 @@
 		"morgan": "~1.9.1",
 		"passport": "^0.6.0",
 		"passport-magic-link": "^2.1.0",
-		"pluralize": "^8.0.0",
-		"sqlite3": "^5.0.2"
+		"pluralize": "^8.0.0"
 	}
 }
