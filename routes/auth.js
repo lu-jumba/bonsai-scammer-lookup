@@ -7,7 +7,7 @@ router.get('/login', (req, res, next) => {
 });
 
 router.post(
-	'/login/mailchain',
+	'/login/mailchain'/*,
 	passport.authenticate('magiclink', {
 		action: 'requestToken',
 		failureRedirect: '/login',
@@ -26,7 +26,7 @@ router.get(
 	passport.authenticate('magiclink', {
 		successReturnToOrRedirect: '/',
 		failureRedirect: '/login',
-	}),
+	}),*/
 );
 router.post('/logout', (req, res, next) => {
 	req.logout((err) => {
