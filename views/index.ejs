@@ -32,18 +32,18 @@
 			<div id="results">
 				<h2>Search Results:</h2>
 				<ul>
-					{{#each results}}
+					<% results.forEach(function(result) { %>
 					<li>
-						<h3>{{ this.title }}</h3>
-						<p>{{ this.content }}</p>
-						<p>{{ this.date }}</p>
+						<h3><%= result.title %></h3>
+						<p><%= result.content %></p>
+						<p><%= result.date %></p>
 					</li>
-					{{/each}}
+					<% }); %>
 				</ul>
 			</div>
-			{{#if message}}
-			<p>{{ message }}</p>
-			{{/if}}
+			<% if (message) { %>
+			<p><%= message %></p>
+			<% } %>
 			<!--<script type="module">"src=/js/query.js"</script>-->
 		<footer class="info">
 			<p>BonSai Scammer Lookup results are aggregated from user reports & verified by Bonsai Cyber Investigators </p>
