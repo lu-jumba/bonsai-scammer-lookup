@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(
+/*app.use(
 	session({
 		secret: process.env.SECRET_PASSPORT_SESSION_KEY,
 		resave: false,
@@ -38,7 +38,7 @@ app.use(
 	}),
 );
 
-app.use(passport.authenticate('session'));
+app.use(passport.authenticate('session'));*/
 
 app.use('/', indexRouter);
 app.use('/', authRouter); // app should 'use' your auth router
