@@ -1,54 +1,54 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Bonsai Lookup!</title>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title><%= title %></title>
 		<link rel="stylesheet" href="/css/base.css">
 		<link rel="stylesheet" href="/css/index.css">
 		<link rel="stylesheet" href="/css/app.css">
-		
-	</head>
-	<body>
-		<section class="bonsaiapp">
-			<nav class="nav">
-				<ul>
-					<li class="user"><%= user.name || user.username || user.email || user.mailchain_address %></li>
-					<li>
-						<form action="/logout" method="post">
-							<button class="logout" type="submit">Sign out</button>
-						</form>
-					</li>
-				</ul>
-			</nav>
-			<header class="headercon">
-				<h1>bonsai lookup!</h1>
-				<p>Information is Power!  Take a moment & check to See if that Dealer, Employer, Seller, Website, Company/Agency or Job is a Scam </p>
-			</header>
-			<form method="post" action="/index">
-				<input type="text" name="query" id="query-input" placeholder="Enter phone number, email, Website address/name, company/agency/individual">
-				<button type="submit" id="submit-btn">Check</button>
-			</form>
-			<div id="results">
-				<h2>Search Results:</h2>
-				<ul>
-					<% results.forEach(function(result) { %>
-					<li>
-						<h3><%= result.title %></h3>
-						<p><%= result.content %></p>
-						<p><%= result.date %></p>
-					</li>
-					<% }); %>
-				</ul>
-			</div>
-			<% if (message) { %>
-			<p><%= message %></p>
-			<% } %>
-			<!--<script type="module">"src=/js/query.js"</script>-->
-		<footer class="info">
-			<p>BonSai Scammer Lookup results are aggregated from user reports & verified by Bonsai Cyber Investigators </p>
-			<p>Report scams, scammers, and fraud to Bonsai Cyber Investigators - bonsaicyber.com.</p>
-			<p>For assistance, reach out: digitalClaims@mailchain. This is a blockchain address. <br/>To ensure your privacy, acquire one at mailchain.com for secure communications.</p>
-		</footer>
-	</body>
+  </head>
+  <body>
+    <body>
+      <section class="bonsaiapp">
+        <nav class="nav">
+          <!--<ul>
+            <li class="user"><%= user.name || user.username || user.email || user.mailchain_address %></li>
+            <li>
+              <form action="/logout" method="post">
+                <button class="logout" type="submit">Sign out</button>
+              </form>
+            </li>
+          </ul>-->
+        </nav>
+        <header class="headercon">
+          <h1><%= title %></h1>
+          <p>Information is Power!  Take a moment & check to See if that Dealer, Employer, Seller, Website, Company/Agency or Job is a Scam </p>
+        </header>
+        <form method="post" action="/index">
+          <input type="text" name="query" id="query-input" placeholder="Enter phone number, email, Website address/name, company/agency/individual">
+          <button type="submit" id="submit-btn">Check</button>
+        </form>
+        <div id="results">
+          <h2>Results:</h2>
+          <ul>
+            <% results.forEach(function(result) { %>
+            <li>
+              <h3><%= result.title %></h3>
+              <p><%= result.content %></p>
+              <p><%= result.date %></p>
+            </li>
+            <% }); %>
+          </ul>
+        </div>
+        <% if (message) { %>
+        <p><%= message %></p>
+        <% } %>
+        <!--<script type="module">"src=/js/query.js"</script>-->
+      <footer class="info">
+        <p>BonSai Scammer Lookup results are aggregated from user reports & verified by Bonsai Cyber Investigators </p>
+        <p>Report scams, scammers, and fraud to Bonsai Cyber Investigators - bonsaicyber.com.</p>
+        <p>For assistance, reach out: digitalClaims@mailchain. This is a blockchain address. <br/>To ensure your privacy, acquire one at mailchain.com for secure communications.</p>
+      </footer>
+  </body>
 </html>
