@@ -3,7 +3,7 @@ var express = require('express');
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-function scrapeWeb(req, res, query) {
+function scrapeWeb(query) {
   try {
       // Perform web scraping here
       const base_url = "https://www.google.com/search?q=";
@@ -44,35 +44,29 @@ function scrapeWeb(req, res, query) {
 }
 
 
-
-
 var router = express.Router();
-
-
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('home', { title: 'Lookup!' });
-  next()
-}, 
-
-(req, res, next) => {
-  //res.locals.filter = null;
-  res.render('index', { title: 'Lookup!' });
-},
-);
-
-router.get('/index', (req, res, next) => {
-	res.render('index');
+  next();
 });
 
-router.post(
-	'/',
-	req.scrapeWeb('query', {
-		action: '',
-		//failureRedirect: '/login',
-	})
-);
+//GET index page
+app.get('/index', (req, res) => {
+  res.render('index', { results: [], message: '' });
+});
 
+//Scrap web
+app.post('/query', async (req, res) => {
+  const query = req.body.query;
+
+  try {
+      const results = await scrapeWeb(query);
+      res.render('index', { results, message: '' });
+  } catch (error) {
+      res.render('index', { results: [], message: error.message });
+  }
+});
 
 module.exports = router;
