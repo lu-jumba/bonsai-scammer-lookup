@@ -53,8 +53,8 @@ router.get('/', function(req, res, next) {
 }); 
 
 //GET index page
-router.get('/', (req, res) => {
-  res.render('index', { results: [], message: '' });
+router.get('/index', (req, res) => {
+  res.render('index', { title: 'Lookup!' } /*{ results: [], message: '' }*/);
 });
 
 //Scrap web
