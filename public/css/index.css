@@ -11,10 +11,11 @@ body {
     background: #f5f5f5;
     color: #111111;
     display: flex;
+	width: 100%;
     Align-items: center;
     justify-content: center;
     height: 100vh;
-    margin: 0;
+	margin: 0 auto;
     flex-direction: column;
     font: 16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 300;
@@ -43,17 +44,18 @@ body {
 	background: #fff;
 	margin: 0 auto;
 	position: relative;
+	width: 100%;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
 	            0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
 
 
-.bonsaiapp.headercon {
+.headercon {
 	
 	margin: 0 auto;
 	padding: 1.2rem 3rem;
 	}
-	.bonsaiapp .headercon h1 {
+	.headercon h1 {
 		/*position: absolute;
 		top: -100px;
 		width: 100%;*/
@@ -66,7 +68,7 @@ body {
 		text-rendering: optimizeLegibility;
 	}
 	
-	.bonsaiapp .headercon p {
+	.headercon p {
 	line-height: 1.2;
 	color: #4d4d4d;
 		font-size: 16px;
@@ -74,14 +76,14 @@ body {
 		text-align: center;
 	}
 
-	.bonsaiapp .query-input {
+	.query-input {
 		border: 2px solid #90EE90;
 		border-radius: 12px;
 		padding: 10px 20px;
 		font-size: 16px;
 		margin-bottom: 20px;
 	}
-	.bonsaiapp.submit-btn {
+	.submit-btn {
 		border: none;
 		border-radius: 12px;
 		background-color: #2b72fb;
@@ -89,7 +91,7 @@ body {
 		padding: 10px 20px;
 		cursor: pointer;
 	}
-	.bonsaiapp.results {
+	.results {
 		border: 2px solid #90EE90;
 		border-radius: 12px;
 		padding: 10px;
