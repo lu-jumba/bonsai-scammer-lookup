@@ -53,12 +53,12 @@ router.get('/', function(req, res, next) {
 });
 
 //GET index page
-app.get('/index', (req, res) => {
+router.get('/index', (req, res) => {
   res.render('index', { results: [], message: '' });
 });
 
 //Scrap web
-app.post('/query', async (req, res) => {
+router.post('/query', async (req, res) => {
   const query = req.body.query;
 
   try {
