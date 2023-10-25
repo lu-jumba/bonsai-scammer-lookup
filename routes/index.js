@@ -53,7 +53,7 @@ router.get('/', function(req, res, next) {
 }); 
 
 //GET index page
-router.get('/index', (req, res) => {
+router.get('/', (req, res) => {
   res.render('index', { results: [], message: '' });
 });
 
