@@ -11,34 +11,42 @@
     <body>
       <section class="bonsaiapp">
         <nav class="nav">
+          <ul>
+            <li class="find"><a href="#">Scammer Locator - Find them!  </a></li>
+            <li class="ai">
+              <a href="#"> AI - Interact with our AI</a>
+            </li>
+          </ul>
          
         </nav>
         <header class="headercon">
           <h1>Lookup!</h1>
-          <p>Information is Power!  Take a moment & check to See if that Dealer, Employer, Seller, Website, Company/Agency or Job is a Scam </p>
+          <p>Information is Power!  <br/> Take a moment & check to See if that:<br/> Dealer, Employer, Seller, Website, Company/Agency or Job is legit </p>
         </header>
         <form method="post" action="/query">
-          <input type="text" name="query" id="query-input" placeholder="Enter phone number, email, Website address/name, company/agency/individual">
-          <button type="submit" id="submit-btn">Check</button>
+          <input type="text" name="query" class="query-input" placeholder="Enter phone number, email, Website address/name, company/agency/individual">
+          <button type="submit" class="submit-btn">Check</button>
         </form>
-        <div id="results">
-          <h2>Results:</h2>
+        <div class="results">
           <ul>
             <% results.forEach(function(result) { %>
             <li>
               <h3><%= result.title %></h3>
+              <a><%= result.link %></a>
               <p><%= result.content %></p>
               <p><%= result.date %></p>
             </li>
             <% }); %>
           </ul>
+          <% if (message) { %>
+            <p><%= message %></p>
+            <% } %>
         </div>
-        <% if (message) { %>
-        <p><%= message %></p>
-        <% } %>
+      </section>
+        
        <!-- <script type="module">"src=/js/srapeWeb.js"</script>-->
       <footer class="info">
-        <p>BonSai Scammer Lookup results are aggregated from user reports & verified by Bonsai Cyber Investigators </p>
+        <p>Lookup results are aggregated from user reports & verified by Bonsai Cyber Investigators </p>
         <p>Report scams, scammers, and fraud to Bonsai Cyber Investigators - bonsaicyber.com.</p>
         <p>For assistance, reach out: digitalClaims@mailchain. This is a blockchain address. <br/>To ensure your privacy, acquire one at mailchain.com for secure communications.</p>
       </footer>

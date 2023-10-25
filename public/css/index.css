@@ -1,10 +1,109 @@
-html,
+/* *, *:before, *:after {
+    box-sizing: inherit;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }*/
 body {
-	margin: 0;
-	padding: 0;
+	line-height: 1.4em;
+    background: #f5f5f5;
+    color: #111111;
+    display: flex;
+    Align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    font: 16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+	/*font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	background: #f5f5f5;
+	color: #111111;
+	min-width: 230px;
+	max-width: 550px;
+	width: 100%;
+	margin: 0 auto;
+	Align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 300;*/
 }
 
-button {
+.bonsaiapp {
+	background: #fff;
+	margin: 0 auto;
+	position: relative;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+	            0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.bonsaiapp.headercon {
+	
+	margin: 0 auto;
+	padding: 1.2rem 3rem;
+	}
+	.bonsaiapp .headercon h1 {
+		/*position: absolute;
+		top: -100px;
+		width: 100%;*/
+		font-size: 60px;
+		font-weight: 200;
+		text-align: center;
+		color: #b83f45;
+		-webkit-text-rendering: optimizeLegibility;
+		-moz-text-rendering: optimizeLegibility;
+		text-rendering: optimizeLegibility;
+	}
+	
+	.bonsaiapp .headercon p {
+	line-height: 1.2;
+	color: #4d4d4d;
+		font-size: 16px;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+		text-align: center;
+	}
+
+	.bonsaiapp .query-input {
+		border: 2px solid #90EE90;
+		border-radius: 12px;
+		padding: 10px 20px;
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
+	.bonsaiapp.submit-btn {
+		border: none;
+		border-radius: 12px;
+		background-color: #2b72fb;
+		color: white;
+		padding: 10px 20px;
+		cursor: pointer;
+	}
+	.bonsaiapp.results {
+		border: 2px solid #90EE90;
+		border-radius: 12px;
+		padding: 10px;
+		width: 50%;
+		min-height: 50px;
+		margin-top: 20px;
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+	
+	}
+	
+
+/*button {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -18,38 +117,13 @@ button {
 	appearance: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-body {
-	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	line-height: 1.4em;
-	background: #f5f5f5;
-	color: #111111;
-	/*min-width: 230px;
-	max-width: 550px;*/
-	width: 100%;
-	margin: 0 auto;
-	Align-items: center;
-    justify-content: center;
-    /*height: 100vh;
-                margin: 0;*/
-    flex-direction: column;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-weight: 300;
-}
+}*/
 
 .hidden {
 	display: none;
 }
 
-.bonsaiapp {
-	background: #fff;
-	margin: 0 auto;
-	position: relative;
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
-	            0 25px 50px 0 rgba(0, 0, 0, 0.1);
-}
+
 
 .bonsaiapp input::-webkit-input-placeholder {
 	font-style: italic;
@@ -69,7 +143,7 @@ body {
 	color: rgba(0, 0, 0, 0.4);
 }
 
-.bonsaiapp h1 {
+/*.bonsaiapp h1 {
 	position: absolute;
 	top: -140px;
 	width: 100%;
@@ -80,70 +154,17 @@ body {
 	-webkit-text-rendering: optimizeLegibility;
 	-moz-text-rendering: optimizeLegibility;
 	text-rendering: optimizeLegibility;
-}
+}*/
 
-/*mine from here*/
-#query-input {
-	border: 2px solid #90EE90;
-	border-radius: 12px;
-	padding: 10px 20px;
-	font-size: 16px;
-	margin-bottom: 20px;
-}
-#submit-btn {
-	border: none;
-	border-radius: 12px;
-	background-color: #2b72fb;
-	color: white;
-	padding: 10px 20px;
-	cursor: pointer;
-}
-#results {
-	border: 2px solid #90EE90;
-	border-radius: 12px;
-	padding: 10px;
-	width: 50%;
-	min-height: 50px;
-	margin-top: 20px;
-	text-align: center;
-}
-header {
-	
-	margin: 0 auto;
-padding: 1.2rem 3rem;
-}
-header h1 {
-	/*position: absolute;
-	top: -100px;
-	width: 100%;*/
-	font-size: 60px;
-	font-weight: 200;
-	text-align: center;
-	color: #b83f45;
-	-webkit-text-rendering: optimizeLegibility;
-	-moz-text-rendering: optimizeLegibility;
-	text-rendering: optimizeLegibility;
-}
-
-header p {
-line-height: 1.2;
-color: #4d4d4d;
-	font-size: 16px;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	text-align: center;
-}
-
-/* upto here*/
-
-.footer {
+/*footer {
 	padding: 10px 15px;
-	height: 20px;
+	height: 60px;
 	text-align: center;
 	font-size: 16px;
 	border-top: 1px solid #e6e6e6;
 }
 
-.footer:before {
+footer:before {
 	content: '';
 	position: absolute;
 	right: 0;
@@ -163,12 +184,12 @@ p {
 	font-size: 11px;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	text-align: center;
-}
+}*/
 
 .info {
-	margin: 65px auto 0;
+	margin: 15px auto 0;
 	color: #4d4d4d;
-	font-size: 15px;
+	font-size: 16px;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	text-align: center;
 }

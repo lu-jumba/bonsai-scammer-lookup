@@ -17,18 +17,18 @@
 	text-rendering: optimizeLegibility;
 }
 
-.bonsaihome section {
+.bonsaihome .moreinfo {
 	padding-top: 1px;
 	text-align: center;
 }
 
-.bonsaihome h2 {
+.bonsaihome .moreinfo h2 {
 	padding-bottom: 48px;
 	font-size: 28px;
 	font-weight: 300;
 }
 
-.bonsaihome .button {
+.bonsaihome .moreinfo .button {
 	padding: 13px 45px;
 	font-size: 16px;
 	font-weight: 500;
@@ -37,7 +37,7 @@
 	background: #d83f45;
 }
 
-.bonsaihome a.button {
+.bonsaihome .moreinfo a.button {
 	text-decoration: none;
 }
 
