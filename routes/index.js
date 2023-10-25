@@ -46,14 +46,14 @@ function scrapeWeb(query) {
 
 var router = express.Router();
 
-/* GET home page.
+/* GET home page.*/
 router.get('/', function(req, res, next) {
   res.render('home', { title: 'Lookup!' });
   next();
-}); */
+}); 
 
 //GET index page
-router.get('/', (req, res) => {
+router.get('/index', (req, res) => {
   res.render('index', { results: [], message: '' });
 });
 
