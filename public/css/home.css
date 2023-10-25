@@ -1,6 +1,6 @@
 
 .bonsaihome {
-	margin: 0 auto;
+	margin: 130px 0 40px 0;
 	position: relative;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .bonsaihome section {
-	padding-top: 5px;
+	padding-top: 1px;
 	text-align: center;
 }
 
@@ -35,31 +35,10 @@
 	color: white;
 	border-radius: 5px;
 	background: #d83f45;
-	position: absolute;}
+}
 
 .bonsaihome a.button {
 	text-decoration: none;
 }
 
-.info {
-	margin: 65px auto 0;
-	color: #4d4d4d;
-	font-size: 18px;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	text-align: center;
-}
-
-.info p {
-	line-height: 1;
-}
-
-.info a {
-	color: inherit;
-	text-decoration: none;
-	font-weight: 400;
-}
-
-.info a:hover {
-	text-decoration: underline;
-}
 
