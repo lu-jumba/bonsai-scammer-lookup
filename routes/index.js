@@ -24,7 +24,7 @@ async function scrapeWeb(query) {
       return request;
     });*/
       // Perform web scraping here
-      const base_url = "https://www.bing.com/search?q=";
+      const base_url = "https://www.bing.com/search?pglt=";
       query = `${query}"scam" OR "fraud" OR "scammer" OR "scammers" OR "scamalert" OR "con" OR "caution" OR "mwizi" OR "thief" OR "thieves" site:facebook.com, site:twitter.com`;
       const url = `${base_url}${query}`;
       const headers = {
