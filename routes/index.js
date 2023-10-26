@@ -73,7 +73,7 @@ async function scrapeWeb(query) {
               });*/
 
               if (results.length === 0) {
-                return (`There have been no reported cases of scam/conning regarding ${query}. Please note that you still need to practice caution, stay alert, avoid too good to be true deals, and avoid being desperate or giving in to the urgency created by scammers. A scammer usually uses tricks such as very very low prices for quality products, creates urgency such as "it's the only item remaining, or impersonates real dealers. Regardless of your situation, insist on face to face deals." `);
+                console.log (`There have been no reported cases of scam/conning regarding ${query}. Please note that you still need to practice caution, stay alert, avoid too good to be true deals, and avoid being desperate or giving in to the urgency created by scammers. A scammer usually uses tricks such as very very low prices for quality products, creates urgency such as "it's the only item remaining, or impersonates real dealers. Regardless of your situation, insist on face to face deals." `);
               }
 
               return results;
@@ -122,10 +122,14 @@ router.post('/query', async (req, res) => {
   const query = req.body.query;
 
   try {
-      const results = await scrapeWeb(query);
-      res.render('index', { results, message: '' });
+    const results = await scrapeWeb(query);
+
+    // Check if results is a string (error message) and convert it to an array
+    const resultsArray = typeof results === 'string' ? [{ title: 'Error', content: results, date: '' }] : results;
+
+    res.render('index', { results: resultsArray, message: '' });
   } catch (error) {
-      res.render('index', { results: [], message: error.message });
+    res.render('index', { results: [], message: error.message });
   }
 });
 
