@@ -12,7 +12,7 @@ async function scrapeWeb(query) {
   try {
       // Perform web scraping here
       const base_url = "https://www.google.com/search?q=";
-      query = `${query}"scam" OR "fraud" OR "scammer" OR "scammers" OR "scamalert" OR "con" OR "caution" OR "mwizi" OR "thief" OR "thieves" site:facebook.com, twitter.com`;
+      query = `${query}"scam" OR "fraud" OR "scammer" OR "scammers" OR "scamalert" OR "con" OR "caution" OR "mwizi" OR "thief" OR "thieves" site:facebook.com, site:twitter.com`;
       const url = `${base_url}${query}`;
       const headers = {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
@@ -65,7 +65,7 @@ async function scrapeWeb(query) {
 
               return results;
             } catch (error) {
-              throw new Error(`An error occurred while making the request: /*${error}*/`);
+              throw new Error(`An error occurred while making the request: ${error}`);
             }
   } catch (error) {
       throw error;
@@ -88,14 +88,6 @@ function parseDate(dateText) {
   return 'Invalid date format';
 }
 
-// Call the scrapeWeb function as needed.
-scrapeWeb('query')
-  .then(results => {
-    console.log(results);
-  })
-  .catch(error => {
-    console.error(error);
-  });
 
 
 
