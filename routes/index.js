@@ -51,7 +51,7 @@ async function scrapeWeb(query) {
         });
 
         if (results.length === 0) {
-          throw new Error (`There have been no reported cases of scam/conning regarding your input. Please note that you still need to practice caution, stay alert, avoid too good to be true deals, and avoid being desperate or giving in to the urgency created by scammers. A scammer usually uses tricks such as very very low prices for quality products, creates urgency such as "it's the only item remaining, or impersonates real dealers. Regardless of your situation, insist on face to face deals." `);
+          throw new Error (`Results are inconclusive--investigations ongoing. NB: You still need to practice caution, stay alert, avoid too good to be true deals, avoid being desperate or giving in to the urgency created by scammers. A scammer usually uses tricks such as very very low prices for quality products, creates urgency such as "it's the only item remaining, or impersonates real dealers. Regardless of your situation, insist on face to face deals." `);
         }
 
         return results;
