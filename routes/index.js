@@ -4,12 +4,25 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const { DateTime } = require('luxon'); //Import the 'Luxon' library for date parsing
 
+const axiosRateLimiter = require('axios-rate-limiter');
+
+// Create a rate limiter that allows 1 request per second
+const rateLimiter = new axiosRateLimiter({
+  perSecond: 1,
+});
+
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 async function scrapeWeb(query) {
 
   try {
+
+    // Intercept all axios requests and apply the rate limiter
+      axios.interceptors.request.use(async (request) => {
+      await rateLimiter.limit();
+      return request;
+    });
       // Perform web scraping here
       const base_url = "https://www.google.com/search?q=";
       query = `${query}"scam" OR "fraud" OR "scammer" OR "scammers" OR "scamalert" OR "con" OR "caution" OR "mwizi" OR "thief" OR "thieves" site:facebook.com, site:twitter.com`;
