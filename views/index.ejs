@@ -32,7 +32,8 @@
           <ul>
             <% results.forEach(function(result) { %>
             <li>
-              <h3><%= result.title %></h3>
+              <h3>Here are reports regarding your search term: <br/>
+              <%= result.title %></h3>
               <a><%= result.link %></a>
               <p><%= result.content %></p>
               <p><%= result.date %></p>

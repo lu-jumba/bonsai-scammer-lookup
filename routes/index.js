@@ -43,8 +43,8 @@ async function scrapeWeb(query) {
         $('div.tF2Cxc').each(async (i, element) => {
             const title = $(element).find('h3').text();
             const link = $(element).find('a').attr('href');
-            const content = $(element).find('p').text();
-            const dateText = $(element).find('div.f').text().trim(); // Trim to remove leading/trailing white spaces
+            const content = $(element).find('div.span.span').text(); // Extract content
+            const dateText = $(element).find('div.span').text().trim(); // Trim to remove leading/trailing white spaces
 
             // Try to parse the date using 'moment' library (or your preferred date library)
             const formatted_date = parseDate(dateText);
@@ -52,7 +52,7 @@ async function scrapeWeb(query) {
             results.push({ title, link, content, date: formatted_date });
             console.log(`${i + 1}. ${title}`);
             console.log(`   Link: ${link}\n`);
-            console.log(`   Content: ${content}\n`);
+            console.log(`   Content: ${content}\n`); // Log content
             console.log(`   Date: ${formatted_date}\n`);
 
 
