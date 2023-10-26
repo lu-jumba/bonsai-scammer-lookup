@@ -173,6 +173,11 @@ nav .ai {
 		overflow: auto; /* Enable vertical scrolling when the content overflows the max-height */
 	
 	}
+
+	.results h3{
+		color: #b83f45;
+	}
+
 	
 
 /*button {
