@@ -25,7 +25,7 @@ async function scrapeWeb(query) {
     });*/
       // Perform web scraping here
       const base_url = "https://www.google.com/search?q=";
-      query = `${query}"scam" OR "con" site:facebook.com`;
+      query = `${query}'"scam"' OR '"con"' site:facebook.com`;
       const url = `${base_url}${query}`;
       const headers = {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
@@ -94,7 +94,7 @@ scrapeWeb('Your Query')
   });
 
 function parseDate(dateText) {
-  const dateFormats = ['LLL d, yyyy', 'LLL d, yyyy h:mm a', 'd LLL, yyyy', 'yyyy, LLL d'];
+  const dateFormats = ['mmm d, yyyy', 'mmm d, yyyy h:mm a', 'd mmm, yyyy', 'yyyy, mmm d'];
 
   for (const format of dateFormats) {
     try {
