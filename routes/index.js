@@ -25,7 +25,7 @@ async function scrapeWeb(query) {
     });*/
       // Perform web scraping here
       const base_url = "https://www.google.com/search?q=";
-      query = `${query}"scam" OR "fraud" OR "scammer" OR "scammers" OR "scamalert" OR "con" OR "caution" OR "mwizi" OR "thief" OR "thieves" site:facebook.com`;
+      query = `${query}"scam" OR "con" site:facebook.com`;
       const url = `${base_url}${query}`;
       const headers = {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
@@ -73,7 +73,7 @@ async function scrapeWeb(query) {
               });*/
 
               if (results.length === 0) {
-                throw new Error (`There have been no reported cases of scam/conning regarding ${query}. Please note that you still need to practice caution, stay alert, avoid too good to be true deals, and avoid being desperate or giving in to the urgency created by scammers. A scammer usually uses tricks such as very very low prices for quality products, creates urgency such as "it's the only item remaining, or impersonates real dealers. Regardless of your situation, insist on face to face deals." `);
+                console.log (`There have been no reported cases of scam/conning regarding ${query}. Please note that you still need to practice caution, stay alert, avoid too good to be true deals, and avoid being desperate or giving in to the urgency created by scammers. A scammer usually uses tricks such as very very low prices for quality products, creates urgency such as "it's the only item remaining, or impersonates real dealers. Regardless of your situation, insist on face to face deals." `);
               }
 
               return results;
@@ -84,6 +84,15 @@ async function scrapeWeb(query) {
       throw error;
   }
 }
+// Call the scrapeWeb function as needed.
+scrapeWeb('Your Query')
+  .then(results => {
+    console.log(results);
+  })
+  .catch(error => {
+    console.error(error);
+  });
+
 function parseDate(dateText) {
   const dateFormats = ['LLL d, yyyy', 'LLL d, yyyy h:mm a', 'd LLL, yyyy', 'yyyy, LLL d'];
 
