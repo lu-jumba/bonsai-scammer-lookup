@@ -164,10 +164,13 @@ nav .ai {
 		padding: 10px;
 		width: 50%;
 		min-height: 50px;
-		margin-top: 20px;
+		margin-top: 5px;
 		text-align: left;
 		display: flex;
 		flex-direction: column;
+
+		max-height: 500px; /* Set a maximum height for the container */
+		overflow: auto; /* Enable vertical scrolling when the content overflows the max-height */
 	
 	}
 	
