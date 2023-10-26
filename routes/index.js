@@ -98,7 +98,7 @@ function parseDate(dateText) {
 
   for (const format of dateFormats) {
     try {
-      const parsedDate = DateTime.fromFormat(dateText, format, { zone: 'utc' });
+      const parsedDate = DateTime.fromFormat(dateText, format, { zone: 'utc+3' });
       if (parsedDate.isValid) {
         return parsedDate.toISODate(); // Format the date as needed
       }
