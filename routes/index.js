@@ -11,9 +11,9 @@ const rateLimiter = new axiosRateLimiter({
   perSecond: 1,
 });
 
-function delay(ms) {
+/*function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
-}
+}*/
 async function scrapeWeb(query) {
 
   try {
@@ -40,7 +40,7 @@ async function scrapeWeb(query) {
               const $ = cheerio.load(response.data);
 
               const results = [];
-        $('div.tF2Cxc').each(async (i, element) => {
+        $('div.tF2Cxc').each(/*async*/ (i, element) => {
             const title = $(element).find('h3').text();
             const link = $(element).find('a').attr('href');
             const content = $(element).find('p').text();
@@ -57,8 +57,8 @@ async function scrapeWeb(query) {
 
 
         // Add a random delay between 1 to 5 seconds (adjust as needed).
-        const randomDelay = Math.floor(Math.random() * 5000) + 1000;
-        await delay(randomDelay);
+        /*const randomDelay = Math.floor(Math.random() * 5000) + 1000;
+        await delay(randomDelay);*/
       });
              /* const results = [];
               $('div.tF2Cxc').each((i, element) => {
