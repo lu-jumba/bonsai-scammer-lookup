@@ -94,7 +94,7 @@ scrapeWeb('Your Query')
   });
 
 function parseDate(dateText) {
-  const dateFormats = ['mmm d, yyyy', 'mmm d, yyyy h:mm a', 'd mmm, yyyy', 'yyyy, mmm d'];
+  const dateFormats = ['mmm d yyyy', 'mmm d yyyy h:mm a', 'd mmm yyyy', 'yyyy mmm d'];
 
   for (const format of dateFormats) {
     try {
