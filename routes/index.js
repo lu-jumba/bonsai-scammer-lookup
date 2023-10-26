@@ -24,8 +24,8 @@ async function scrapeWeb(query) {
       return request;
     });*/
       // Perform web scraping here
-      const base_url = "https://www.bing.com/search?pglt=";
-      query = `${query}"scam" OR "fraud" OR "scammer" OR "scammers" OR "scamalert" OR "con" OR "caution" OR "mwizi" OR "thief" OR "thieves" site:facebook.com, site:twitter.com`;
+      const base_url = "https://www.google.com/search?q=";
+      query = `${query}"scam" OR "fraud" OR "scammer" OR "scammers" OR "scamalert" OR "con" OR "caution" OR "mwizi" OR "thief" OR "thieves" site:facebook.com`;
       const url = `${base_url}${query}`;
       const headers = {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
