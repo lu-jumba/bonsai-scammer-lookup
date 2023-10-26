@@ -25,7 +25,7 @@ async function scrapeWeb(query) {
     });*/
       // Perform web scraping here
       const base_url = "https://www.google.com/search?q=";
-      query = `${query}" and scam" OR " and scammer",  site:https://web.facebook.com`;
+      query = `${query}" and scam or scammer or con or mwizi"  site:https://web.facebook.com`;
       const url = `${base_url}${query}`;
       const headers = {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
